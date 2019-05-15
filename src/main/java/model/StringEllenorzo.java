@@ -4,9 +4,9 @@ public class StringEllenorzo {
 
     public StringEllenorzo(){}
 
-
     public String stringEllenorzese(String beirtszoveg){
 
+        beirtszoveg=beirtszoveg.trim();
 
         if(aBeirtKarakterekSzamaNulla(beirtszoveg)){
             return "A beírt karakterek száma nulla!";
@@ -14,10 +14,6 @@ public class StringEllenorzo {
 
         if(aBeirtKarakterekSzamaMaxTizennyolcLehet(beirtszoveg)){
             return "A beírt karakterek száma maximum 18 lehet!";
-        }
-
-        if(aBeirtSzovegSzokoztTartalmaz(beirtszoveg)){
-            return "A beírt szöveg nem tartalmazhat szóközt!";
         }
 
         if(nemMegengedettKaraktertTartalmaz(beirtszoveg)){
@@ -38,6 +34,10 @@ public class StringEllenorzo {
 
         if(maxHaromPerjelLehetBenne(beirtszoveg)){
             return "Maximum 3 perjel lehet benne!";
+        }
+
+        if(nemVegzodhetPerjellel(beirtszoveg)){
+            return "Nem végződhet perjellel!";
         }
 
         if(betuEsSzamjegyNemLehetEgymasMellett(beirtszoveg)){
@@ -61,12 +61,6 @@ public class StringEllenorzo {
         return false;
     }
 
-    public boolean aBeirtSzovegSzokoztTartalmaz(String str){
-        if(str.contains(" ")){
-            return true;
-        }
-        return false;
-    }
 
     public boolean nemMegengedettKaraktertTartalmaz(String str){
         str = str.toUpperCase();
@@ -111,6 +105,13 @@ public class StringEllenorzo {
             if(p>3){
                 return true;
             }
+        }
+        return false;
+    }
+
+    public boolean nemVegzodhetPerjellel(String str){
+        if(str.endsWith("/")){
+            return true;
         }
         return false;
     }
