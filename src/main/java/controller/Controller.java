@@ -1,5 +1,7 @@
 package controller;
 
+import javafx.application.Platform;
+import javafx.scene.layout.Pane;
 import model.*;
 
 import javafx.event.ActionEvent;
@@ -15,6 +17,9 @@ public class Controller {
     public StringEllenorzo stringellenorzo = new StringEllenorzo();
     public String beirtszoveg;
     public String uzenet;
+
+    @FXML
+    private Pane panel;
 
     @FXML
     private TextField bevitel;
@@ -42,6 +47,11 @@ public class Controller {
     @FXML
     private void torlesGombAction(ActionEvent event){
         bevitel.clear();
+    }
+
+   @FXML
+    private void kilepesGombAction(ActionEvent event){
+        Platform.exit();
     }
 
 
