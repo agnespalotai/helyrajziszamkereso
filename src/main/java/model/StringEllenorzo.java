@@ -15,6 +15,8 @@ public class StringEllenorzo {
     /**
      * A metódus elvégzi egy karakterlánc ellenőrzését
      * aszerint, hogy az megfelel-e egy helyrajzi szám formátumának.
+     * @param  beirtszoveg a felhasználó által beírt karakterlánc
+     * @return az ellenőrzés eredményének szövege
      */
     public String stringEllenorzese(String beirtszoveg){
 
@@ -61,6 +63,7 @@ public class StringEllenorzo {
     /**
      * A metódus megvizsgálja, hogy a felhasználó által megadott
      * karakterláncot üres-e, azaz nem írt be semmit.
+     * @param str a felhasználó által beírt karakterlánc
      * @return true, ha üres a beviteli mező.
      */
     public boolean aBeirtKarakterekSzamaNulla(String str){
@@ -73,6 +76,7 @@ public class StringEllenorzo {
     /**
      * A metódus megvizsgálja, hogy a felhasználó által megadott
      * karakterláncot hossza nagyobb-e 18-nál.
+     * @param str a felhasználó által beírt karakterlánc
      * @return true, ha igen.
      */
     public boolean aBeirtKarakterekSzamaMaxTizennyolcLehet(String str){
@@ -85,6 +89,7 @@ public class StringEllenorzo {
     /**
      * A metódus megvizsgálja, hogy a felhasználó által megadott
      * karakterlánc tartalmaz-e nem megengedett karaktert.
+     * @param str a felhasználó által beírt karakterlánc
      * @return true, ha igen.
      */
     public boolean nemMegengedettKaraktertTartalmaz(String str){
@@ -103,6 +108,7 @@ public class StringEllenorzo {
      * A metódus megvizsgálja, hogy a felhasználó által megadott
      * karakterlánc, ha ez egy hosszúságú, akkor az nullától
      * különböző számjegy-e.
+     * @param str a felhasználó által beírt karakterlánc
      * @return true, ha igen.
      */
     public boolean azEgyHosszusaguHelyrajziSzamCsakNemNullaSzamLehet(String str){
@@ -115,6 +121,7 @@ public class StringEllenorzo {
     /**
      * A metódus megvizsgálja, hogy a felhasználó által megadott
      * karakterlánc két nullával kezdődik-e.
+     * @param str a felhasználó által beírt karakterlánc
      * @return true, ha igen.
      */
     public boolean nemKezdodhetKetNullaval(String str){
@@ -127,6 +134,7 @@ public class StringEllenorzo {
     /**
      * A metódus megvizsgálja, hogy a felhasználó által megadott
      * karakterláncban van-e két perjel egymás mellett.
+     * @param str a felhasználó által beírt karakterlánc
      * @return true, ha igen.
      */
     public boolean ketPerjelNemLehetEgymasMellett(String str){
@@ -139,6 +147,7 @@ public class StringEllenorzo {
     /**
      * A metódus megvizsgálja, hogy a felhasználó által megadott
      * karakterláncban van-e háromnál több perjel.
+     * @param str a felhasználó által beírt karakterlánc
      * @return true, ha igen.
      */
     public boolean maxHaromPerjelLehetBenne(String str){
@@ -157,6 +166,7 @@ public class StringEllenorzo {
     /**
      * A metódus megvizsgálja, hogy a felhasználó által megadott
      * karakterlánc perjellel végződik-e.
+     * @param str a felhasználó által beírt karakterlánc
      * @return true, ha igen.
      */
     public boolean nemVegzodhetPerjellel(String str){
@@ -170,6 +180,7 @@ public class StringEllenorzo {
      * A metódus megvizsgálja, hogy a felhasználó által megadott
      * karakterláncban van-e egymást követő számjegy és betű, vagy fordítva,
      * betű és számjegy.
+     * @param str a felhasználó által beírt karakterlánc
      * @return true, ha igen.
      */
     public boolean betuEsSzamjegyNemLehetEgymasMellett(String str){
@@ -189,6 +200,7 @@ public class StringEllenorzo {
 
     /**
      * A metódus megvizsgálja, hogy egy karakter perjel-e.
+     * @param karakterkod egy karakter numerikus számértéke
      * @return true, ha igen.
      */
     public boolean karakterTipusaPerjel(int karakterkod){
@@ -200,6 +212,7 @@ public class StringEllenorzo {
 
     /**
      * A metódus megvizsgálja, hogy egy karakter számjegy-e.
+     * @param karakterkod egy karakter numerikus számértéke
      * @return true, ha igen.
      */
     public boolean karakterTipusaSzamjegy(int karakterkod){
@@ -212,6 +225,7 @@ public class StringEllenorzo {
     /**
      * A metódus megvizsgálja, hogy egy karakter egy helyrajziszámban
      * használható megengedett karakter-e.
+     * @param karakterkod egy karakter numerikus számértéke
      * @return true, ha igen.
      */
     public boolean karakterTipusaMegengedettBetu(int karakterkod){

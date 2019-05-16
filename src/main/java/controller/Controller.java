@@ -20,30 +20,61 @@ public class Controller {
      */
     public Controller(){}
 
+    /**
+     * Példányosít egy {@code StringEllenorzo} osztályt.
+     */
     public StringEllenorzo stringellenorzo = new StringEllenorzo();
+
+    /**
+     * A felhasználó által beírt karakterláncot tároló tag.
+     */
     public String beirtszoveg;
+
+    /**
+     * A beírt karakterlánc ellenőrzés eredményének megfelelő üzenet.
+     */
     public String uzenet;
 
+    /**
+     * A felhasználói felület beviteli mezője.
+     */
     @FXML
     private TextField bevitel;
 
+    /**
+     * A felhasználói felület eredmény mezője.
+     */
     @FXML
     private Label eredmeny;
 
-
+    /**
+     * A metódus inicializálja a felhasználói felületet.
+     */
     @FXML
     public void initialize() { }
 
+    /**
+     * A felhasználói felület ellenőrző gombjának eseménykezelő metódusa.
+     * @param event az esemény
+     */
     @FXML
     private void ellenorzoGombAction(ActionEvent event){
         controll();
     }
 
+    /**
+     * A felhasználói felület törlés gombjának eseménykezelő metódusa.
+     * @param event az esemény
+     */
     @FXML
     private void torlesGombAction(ActionEvent event){
         bevitel.clear();
     }
 
+    /**
+     * A felhasználói felület kilépés gombjának eseménykezelő metódusa.
+     * @param event az esemény
+     */
    @FXML
     private void kilepesGombAction(ActionEvent event){
         Platform.exit();
@@ -53,6 +84,7 @@ public class Controller {
      * A metódus meghívja a felhasználótól bekért karakterlánc
      * ellenőrzését elvégző {@code StringEllenorzo} osztály metódusát,
      * majd az eredménynek megfelelő üzenetet ír ki.
+     * @return az üzenet szövege
      */
     public String controll(){
 

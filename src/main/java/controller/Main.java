@@ -29,6 +29,7 @@ public class Main extends Application {
 
     /**
      * Az alkalméazás belépési pontja.
+     * @param args argumentum
      */
     public static void main(String[] args) {
         launch(args);

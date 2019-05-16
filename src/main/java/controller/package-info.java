@@ -1,4 +1,4 @@
-/**A csomag a következő osztályokat tartalmazza:
+/**A csomag két osztályt tartalmaz.
  * Controller.java
  * Main.java
  */
