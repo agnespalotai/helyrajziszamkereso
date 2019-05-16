@@ -22,7 +22,7 @@
                 <Font size="24.0" />
             </font>
         </TextField>
-        <Button fx:id="ellenorzogomb" layoutX="197.0" layoutY="148.0" mnemonicParsing="false" onAction="#ellenorzoGombAction" prefHeight="60.0" prefWidth="256.0" text="Ellenőrzés!" textFill="#0c18c7">
+        <Button fx:id="ellenorzogomb" layoutX="197.0" layoutY="148.0" mnemonicParsing="false" onAction="#ellenorzoGombAction" prefHeight="60.0" prefWidth="256.0" text="Ellenőrzés" textFill="#0c18c7">
             <font>
                 <Font size="24.0" />
             </font>
@@ -36,7 +36,7 @@
                 <Font size="20.0" />
             </font>
         </Button>
-        <Button fx:id="kilepes" alignment="CENTER" layoutX="373.0" layoutY="421.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="130.0" text="Kilépés">
+        <Button fx:id="kilepes" alignment="CENTER" layoutX="373.0" layoutY="421.0" mnemonicParsing="false"  onAction="#kilepesGombAction" prefHeight="50.0" prefWidth="130.0" text="Kilépés">
             <font>
                 <Font size="20.0" />
             </font>
