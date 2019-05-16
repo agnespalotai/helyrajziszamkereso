@@ -149,7 +149,8 @@ public class StringEllenorzo {
     }
 
     public boolean karakterTipusaMegengedettBetu(int karakterkod){
-        if( karakterkod >= 65 && karakterkod <=86 && karakterkod != 81){
+        if( karakterkod >= 65 && karakterkod <=86 && karakterkod != 69 &&
+                karakterkod != 73 && karakterkod != 79 && karakterkod != 85 && karakterkod != 81){
             return true;
         }
         return false;
