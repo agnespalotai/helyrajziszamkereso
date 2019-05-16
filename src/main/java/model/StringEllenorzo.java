@@ -1,9 +1,21 @@
 package model;
 
+/**
+ * Osztály, ami tartalmazza egy karakterlánc különböző szempontok
+ * szerinti vizsgálatát.
+ */
 public class StringEllenorzo {
 
+    /**
+     * A StringEllenorzo osztály konstruktora.
+     */
     public StringEllenorzo(){}
 
+
+    /**
+     * A metódus elvégzi egy karakterlánc ellenőrzését
+     * aszerint, hogy az megfelel-e egy helyrajzi szám formátumának.
+     */
     public String stringEllenorzese(String beirtszoveg){
 
         beirtszoveg=beirtszoveg.trim();
@@ -46,6 +58,11 @@ public class StringEllenorzo {
         return "OK";
     }
 
+    /**
+     * A metódus megvizsgálja, hogy a felhasználó által megadott
+     * karakterláncot üres-e, azaz nem írt be semmit.
+     * @return true, ha üres a beviteli mező.
+     */
     public boolean aBeirtKarakterekSzamaNulla(String str){
         if(str.isEmpty()){
             return true;
@@ -53,7 +70,11 @@ public class StringEllenorzo {
         return false;
     }
 
-
+    /**
+     * A metódus megvizsgálja, hogy a felhasználó által megadott
+     * karakterláncot hossza nagyobb-e 18-nál.
+     * @return true, ha igen.
+     */
     public boolean aBeirtKarakterekSzamaMaxTizennyolcLehet(String str){
         if(str.length() > 18){
             return true;
@@ -61,7 +82,11 @@ public class StringEllenorzo {
         return false;
     }
 
-
+    /**
+     * A metódus megvizsgálja, hogy a felhasználó által megadott
+     * karakterlánc tartalmaz-e nem megengedett karaktert.
+     * @return true, ha igen.
+     */
     public boolean nemMegengedettKaraktertTartalmaz(String str){
         str = str.toUpperCase();
         for (int i=0; i<str.length(); ++i){
@@ -74,6 +99,12 @@ public class StringEllenorzo {
         return false;
     }
 
+    /**
+     * A metódus megvizsgálja, hogy a felhasználó által megadott
+     * karakterlánc, ha ez egy hosszúságú, akkor az nullától
+     * különböző számjegy-e.
+     * @return true, ha igen.
+     */
     public boolean azEgyHosszusaguHelyrajziSzamCsakNemNullaSzamLehet(String str){
         if(str.length()==1 && !(str.codePointAt(0)>48 && str.codePointAt(0)<=57)){
             return true;
@@ -81,6 +112,11 @@ public class StringEllenorzo {
         return false;
     }
 
+    /**
+     * A metódus megvizsgálja, hogy a felhasználó által megadott
+     * karakterlánc két nullával kezdődik-e.
+     * @return true, ha igen.
+     */
     public boolean nemKezdodhetKetNullaval(String str){
         if(str.length()>1 && str.codePointAt(0)==48 && str.codePointAt(1)==48){
             return true;
@@ -88,7 +124,11 @@ public class StringEllenorzo {
         return false;
     }
 
-
+    /**
+     * A metódus megvizsgálja, hogy a felhasználó által megadott
+     * karakterláncban van-e két perjel egymás mellett.
+     * @return true, ha igen.
+     */
     public boolean ketPerjelNemLehetEgymasMellett(String str){
         if(str.contains("//")){
             return true;
@@ -96,6 +136,11 @@ public class StringEllenorzo {
         return false;
     }
 
+    /**
+     * A metódus megvizsgálja, hogy a felhasználó által megadott
+     * karakterláncban van-e háromnál több perjel.
+     * @return true, ha igen.
+     */
     public boolean maxHaromPerjelLehetBenne(String str){
         int p = 0;
         for(int i = 0; i<str.length(); ++i){
@@ -109,6 +154,11 @@ public class StringEllenorzo {
         return false;
     }
 
+    /**
+     * A metódus megvizsgálja, hogy a felhasználó által megadott
+     * karakterlánc perjellel végződik-e.
+     * @return true, ha igen.
+     */
     public boolean nemVegzodhetPerjellel(String str){
         if(str.endsWith("/")){
             return true;
@@ -116,7 +166,12 @@ public class StringEllenorzo {
         return false;
     }
 
-
+    /**
+     * A metódus megvizsgálja, hogy a felhasználó által megadott
+     * karakterláncban van-e egymást követő számjegy és betű, vagy fordítva,
+     * betű és számjegy.
+     * @return true, ha igen.
+     */
     public boolean betuEsSzamjegyNemLehetEgymasMellett(String str){
         str = str.toUpperCase();
         if(str.length()>1) {
@@ -132,8 +187,10 @@ public class StringEllenorzo {
         return false;
     }
 
-
-
+    /**
+     * A metódus megvizsgálja, hogy egy karakter perjel-e.
+     * @return true, ha igen.
+     */
     public boolean karakterTipusaPerjel(int karakterkod){
         if(karakterkod == 47){
             return true;
@@ -141,6 +198,10 @@ public class StringEllenorzo {
         return false;
     }
 
+    /**
+     * A metódus megvizsgálja, hogy egy karakter számjegy-e.
+     * @return true, ha igen.
+     */
     public boolean karakterTipusaSzamjegy(int karakterkod){
         if(karakterkod >= 48 && karakterkod <= 57){
             return true;
@@ -148,6 +209,11 @@ public class StringEllenorzo {
         return false;
     }
 
+    /**
+     * A metódus megvizsgálja, hogy egy karakter egy helyrajziszámban
+     * használható megengedett karakter-e.
+     * @return true, ha igen.
+     */
     public boolean karakterTipusaMegengedettBetu(int karakterkod){
         if( karakterkod >= 65 && karakterkod <=86 && karakterkod != 69 &&
                 karakterkod != 73 && karakterkod != 79 && karakterkod != 85 && karakterkod != 81){

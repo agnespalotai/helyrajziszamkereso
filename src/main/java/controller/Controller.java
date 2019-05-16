@@ -1,17 +1,23 @@
 package controller;
 
 import javafx.application.Platform;
-import javafx.scene.layout.Pane;
 import model.*;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+/**
+ * Osztály, ami kezeli a felhasználói felület komponenseinek
+ * eseményeit.
+ *
+ */
 public class Controller {
 
+    /**
+     * A Controller osztály konstruktora.
+     */
     public Controller(){}
 
     public StringEllenorzo stringellenorzo = new StringEllenorzo();
@@ -19,22 +25,11 @@ public class Controller {
     public String uzenet;
 
     @FXML
-    private Pane panel;
-
-    @FXML
     private TextField bevitel;
-
-    @FXML
-    private Button ellenorzogomb;
 
     @FXML
     private Label eredmeny;
 
-    @FXML
-    private Button torles;
-
-    @FXML
-    private Button kilepes;
 
     @FXML
     public void initialize() { }
@@ -54,7 +49,11 @@ public class Controller {
         Platform.exit();
     }
 
-
+    /**
+     * A metódus meghívja a felhasználótól bekért karakterlánc
+     * ellenőrzését elvégző {@code StringEllenorzo} osztály metódusát,
+     * majd az eredménynek megfelelő üzenetet ír ki.
+     */
     public String controll(){
 
         beirtszoveg = bevitel.getText();

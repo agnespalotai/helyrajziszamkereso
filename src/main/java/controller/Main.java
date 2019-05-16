@@ -10,10 +10,8 @@ import javafx.stage.Stage;
 /**
  * Helyrajzi-szám ellenőrző program.
  * A felhasználótól bekér egy sztringet, majd megvizsgálja, hogy
- * az megfelel-e egy helyrajzi-szám formátumának.
- * Ha nem felel meg, akkor a hiba okának megfelelő üzenetet ír ki.
- * Ha megfelel, akkor megkeresi egy adatbázisban, hogy van-e
- * a helyrajzi-számhoz megállapított cím.
+ * az megfelel-e egy helyrajzi-szám formátumának, maj az ellenőrzés
+ * eredményének megfelelő üzenetet ír ki.
  * @author Palotai Ágnes
  * @version 1.0
  */
@@ -29,7 +27,9 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-
+    /**
+     * Az alkalméazás belépési pontja.
+     */
     public static void main(String[] args) {
         launch(args);
     }
