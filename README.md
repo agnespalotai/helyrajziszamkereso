@@ -11,7 +11,7 @@ Ha a felhasználható betűk nem elegendőek, a jelölést az „AA”, „AB”
 kezdve kell folytatni. Egy épületen belül a lakások helyrajziszámozását 1-től 999-ig lehet végezni (pl. 128265/2858/BA/118).”
 
 Ha az ellenőrzés során hibát észlel, akkor a hibának megfelelő üzenet jelenik meg, ha pedig a karakterek száma és típusa megfelelő, 
-akkor egy adatbázisból kikeresi a hozzá tartozó cím(eke)t, ha létezik olyan.
+akkor egy adatbázisból kikeresi a hozzá tartozó Nyíregyháza városhoz tartozó cím(eke)t, ha létezik olyan.
 
 A könnyebb használhatóság érdekében az ellenőrzés majd a keresés a szóközöktől megtisztított és nagybetűsített sztringgel történik.
 
