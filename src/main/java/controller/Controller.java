@@ -1,14 +1,14 @@
 package controller;
 
 import javafx.application.Platform;
-import model.*;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.util.List;
+import model.*;
+
 
 /**
  * Osztály, ami kezeli a felhasználói felület komponenseinek
@@ -71,6 +71,7 @@ public class Controller {
     @FXML
     private void torlesGombAction(ActionEvent event){
         bevitel.clear();
+        eredmeny.setText("");
     }
 
     /**
@@ -82,24 +83,24 @@ public class Controller {
         Platform.exit();
     }
 
+
     /**
      * A metódus meghívja a felhasználótól bekért karakterlánc
      * ellenőrzését elvégző {@code StringEllenorzo} osztály metódusát,
      * majd az eredménynek megfelelő üzenetet ír ki.
-     * @return az üzenet szövege
      */
-    public String controll(){
+    public void controll(){
 
         beirtszoveg = bevitel.getText();
         uzenet = stringellenorzo.stringEllenorzese(beirtszoveg);
         bevitel.setText(bevitel.getText().toUpperCase());
         eredmeny.setText(uzenet);
-        /*if(!uzenet.equals("OK")){
+        if(!uzenet.equals("OK")){
             eredmeny.setText(uzenet);
+            return;
         }
-            return;*/
-        return uzenet;
-    }
+
+    eredmeny.setText("");
 
     Kereses kereses = new Kereses();
 
@@ -107,7 +108,9 @@ public class Controller {
 
     StringBuilder uzi = new StringBuilder();
 
-/*		if(hrsz.isEmpty()){
+
+
+		if(hrsz.isEmpty()){
         eredmeny.setText("Nincs címe a nyilvántartásban.");
         return;
     }
@@ -120,5 +123,6 @@ public class Controller {
         }
         eredmeny.setText(uzi.toString());
         return;
-    }*/
+        }
+    }
 }
