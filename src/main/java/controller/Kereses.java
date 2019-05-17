@@ -8,10 +8,22 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 import model.*;
 
+/**
+ * Osztály, ami megkeresei a formátumnak megfelelő helyrajziszámhoz
+ * tartozó cím(eke)t az adatbázisban.
+ */
 public class Kereses {
 
+    /**
+     * Adatbáziskezelő.
+     */
     private static EntityManager em;
 
+    /**
+     * Metódusm ami visszaadja az adatbáziskeresés találati eredményét.
+     * @param hrsz a keresendő helyrajziszám
+     * @return List<Hrsz> a kapott eredménylista
+     */
     public List<Hrsz> readHrszBy(String hrsz){
 
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("hrsz_remotemysql");

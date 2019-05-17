@@ -50,7 +50,7 @@ public class Controller {
     private Label eredmeny;
 
     /**
-     * A metódus inicializálja a felhasználói felületet.
+     * A felhasználói felület inicializáló metódusa.
      */
     @FXML
     public void initialize() { }
@@ -83,7 +83,6 @@ public class Controller {
         Platform.exit();
     }
 
-
     /**
      * A metódus meghívja a felhasználótól bekért karakterlánc
      * ellenőrzését elvégző {@code StringEllenorzo} osztály metódusát,
@@ -108,8 +107,6 @@ public class Controller {
 
     StringBuilder uzi = new StringBuilder();
 
-
-
 		if(hrsz.isEmpty()){
         eredmeny.setText("Nincs címe a nyilvántartásban.");
         return;
@@ -119,7 +116,7 @@ public class Controller {
             uzi.append(hrsz.get(i).getCim());
             uzi.append("   (");
             uzi.append(hrsz.get(i).getVarosresz());
-            uzi.append("   )\n");
+            uzi.append(")\n");
         }
         eredmeny.setText(uzi.toString());
         return;
