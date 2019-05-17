@@ -8,6 +8,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import java.util.List;
+
 /**
  * Osztály, ami kezeli a felhasználói felület komponenseinek
  * eseményeit.
@@ -92,7 +94,31 @@ public class Controller {
         uzenet = stringellenorzo.stringEllenorzese(beirtszoveg);
         bevitel.setText(bevitel.getText().toUpperCase());
         eredmeny.setText(uzenet);
+        /*if(!uzenet.equals("OK")){
+            eredmeny.setText(uzenet);
+        }
+            return;*/
         return uzenet;
     }
 
+    Kereses kereses = new Kereses();
+
+    List<Hrsz> hrsz = kereses.readHrszBy(beirtszoveg);
+
+    StringBuilder uzi = new StringBuilder();
+
+/*		if(hrsz.isEmpty()){
+        eredmeny.setText("Nincs címe a nyilvántartásban.");
+        return;
+    }
+		else{
+        for(int i=0; i<hrsz.size();++i){
+            uzi.append(hrsz.get(i).getCim());
+            uzi.append("   (");
+            uzi.append(hrsz.get(i).getVarosresz());
+            uzi.append("   )\n");
+        }
+        eredmeny.setText(uzi.toString());
+        return;
+    }*/
 }
