@@ -7,9 +7,9 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://remotemysql.com:3306/7bBZeDKRUN"/>
-            <property name="javax.persistence.jdbc.user" value="7bBZeDKRUN"/>
-            <property name="javax.persistence.jdbc.password" value="EkJYA6htc6"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://remotemysql.com:3306/jpFHIuRWMU"/>
+            <property name="javax.persistence.jdbc.user" value="jpFHIuRWMU"/>
+            <property name="javax.persistence.jdbc.password" value="RTSYDvy9Kb"/>
         </properties>
     </persistence-unit>
 
